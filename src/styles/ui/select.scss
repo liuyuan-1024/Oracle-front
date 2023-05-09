@@ -1,0 +1,17 @@
+//select组件的通用样式
+
+:deep(.n-select) {
+  width: auto;
+  .n-base-selection {
+    .n-base-selection-label {
+      background-color: $app_bg_color;
+      .n-base-selection-input {
+        color: $white;
+        font-weight: 700;
+      }
+    }
+    .n-base-selection__border {
+      border: none;
+    }
+  }
+}

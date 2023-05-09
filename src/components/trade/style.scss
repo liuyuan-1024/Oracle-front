@@ -1,0 +1,16 @@
+@import '../trend/style.scss';
+
+// ******************** 交易栏 样式变量 ******************** //
+$trade_bar_height: 100% - $trend_bar_height;
+
+// ******************** 交易头部栏 ******************** //
+$trade_header_height: 18%;
+
+// ******************** 交易历史栏 ******************** //
+$trade_history_height: 100% - $trade_header_height;
+
+$trade_history_item_height: 18%;
+$trade_history_item_radius: 10px;
+
+$trade-history-item: #2e2b43;
+$trade-history-item_hover: #3b3854;

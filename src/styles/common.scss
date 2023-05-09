@@ -1,0 +1,26 @@
+// ******************** 定义一些布局变量，不写样式 ******************** //
+
+// #app的padding
+$app_padding_bottom: 1%;
+$app_padding_left_right: 0.5%;
+
+// HeaderTitleBar的高
+$header_title_bar_height: 20px;
+// HeaderBar的高
+$header_bar_height: 40px;
+// NavBar的宽高
+$nav_bar_width: $header_bar_height;
+// main的宽高
+$main-padding-top: 15px;
+$main-padding-left: 10px;
+
+// ******************** APP 样式变量 ******************** //
+$app_bg_color: #29263d;
+
+// ******************** APP 颜色变量 ******************** //
+//浅灰色
+$gray: #9994ba;
+//白色
+$white: #fff;
+//紫灰色
+$purplish_gray: #322f4a;

@@ -1,0 +1,23 @@
+// ******************** 颜色 ******************** //
+$details_item_bg_color: #3b3854;
+$details_item_description_color: #807b9e;
+
+// ******************** 主体栏 ******************** //
+$subject_bar_width: 38%;
+
+// ******************** 主体 ******************** //
+$subject_height: 12%;
+$subject_radius: 6px;
+
+// ******************** 详情栏 ******************** //
+$details_height: 65%;
+
+// 详情头部
+$details_header_height: 15%;
+
+// 详情的items和item
+$details_items_height: 100% - $details_header_height;
+$details_item_radius: 8px;
+
+// ******************** 分数栏 ******************** //
+$score_height: 100% - $subject_height - $details_height;
