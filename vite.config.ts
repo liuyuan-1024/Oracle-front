@@ -66,12 +66,19 @@ export default ({ mode }) => {
     server: {
       // 解决跨域问题
       proxy: {
+        // 代理Java后端
         '/api': {
           target: env.VITE_REAL_URL, // 代理的地址(实际请求地址)
           changeOrigin: true, // 允许跨域
           secure: false, // 如果是不是https接口，可以不配置这个参数
           ws: true, //代理 web socked
           rewrite: (path) => path.replace(/^\/api/, '')
+        },
+        // 代理Gitea后端
+        '/gitea': {
+          target: 'http://127.0.0.1:3000',
+          changeOrigin: true,
+          rewrite: (path) => path.replace(/^\/gitea/, '')
         },
         '/g2': {
           target: 'https://gw.alipayobjects.com/',
