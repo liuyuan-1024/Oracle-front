@@ -1,42 +1,42 @@
 <template>
-  <svg class="icon" :style="iconClass" aria-hidden="true">
-    <use :xlink:href="iconTag"></use>
+  <svg :style='iconClass' aria-hidden='true' class='icon'>
+    <use :xlink:href='iconTag'></use>
   </svg>
 </template>
 
-<script lang="ts">
+<script lang='ts'>
 export default {
-  name: 'SymbolIcon'
-}
+  name: 'SymbolIcon',
+};
 </script>
 
-<script lang="ts" setup>
-import '@/assets/iconfont.js'
-import { computed } from '@vue/reactivity'
+<script lang='ts' setup>
+import '@/assets/iconfont.js';
+import { computed } from '@vue/reactivity';
 
 const props = defineProps<{
   name: string
   size?: string
   color?: string
-}>()
+}>();
 
 const iconTag = computed(() => {
-  return `#icon-${props.name}`
-})
+  return `#icon-${props.name}`;
+});
 
 const iconClass = computed(() => {
-  let result: string = ''
+  let result: string = '';
 
   if (props.size) {
-    result = result + `font-size: ${props.size};`
+    result = result + `font-size: ${props.size};`;
   }
 
   if (props.color) {
-    result = result + `color: ${props.color};`
+    result = result + `color: ${props.color};`;
   }
 
-  return result
-})
+  return result;
+});
 </script>
 
 <style scoped>

@@ -1,22 +1,22 @@
-<script lang="ts">
+<script lang='ts'>
 export default {
-  name: 'TradeBar'
-}
+  name: 'TradeBar',
+};
 </script>
 
-<script setup lang="ts">
-import TradeHeader from './TradeHeader.vue'
-import TradeHistory from '@/components/trade/history/History.vue'
+<script lang='ts' setup>
+import TradeHeader from './TradeHeader.vue';
+import TradeHistory from '@/components/trade/history/History.vue';
 </script>
 
 <template>
-  <div id="trade-bar">
+  <div id='trade-bar'>
     <TradeHeader />
     <TradeHistory />
   </div>
 </template>
 
-<style scoped lang="scss">
+<style lang='scss' scoped>
 @import './style.scss';
 
 #trade-bar {

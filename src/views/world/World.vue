@@ -2,12 +2,12 @@
   <h1>世界</h1>
 </template>
 
-<script lang="ts">
+<script lang='ts'>
 export default {
-  name: 'World'
-}
+  name: 'World',
+};
 </script>
 
-<script setup lang="ts"></script>
+<script lang='ts' setup></script>
 
 <style scoped></style>

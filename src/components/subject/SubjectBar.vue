@@ -1,24 +1,24 @@
-<script lang="ts">
+<script lang='ts'>
 export default {
-  name: 'SubjectBar'
-}
+  name: 'SubjectBar',
+};
 </script>
 
-<script setup lang="ts">
-import Subject from './Subject.vue'
-import Details from './details/Details.vue'
-import Score from './score/Score.vue'
+<script lang='ts' setup>
+import Subject from './Subject.vue';
+import Details from './details/Details.vue';
+import Score from './score/Score.vue';
 </script>
 
 <template>
-  <div id="subject-bar">
+  <div id='subject-bar'>
     <Subject />
     <Details />
     <Score />
   </div>
 </template>
 
-<style scoped lang="scss">
+<style lang='scss' scoped>
 @import './style.scss';
 
 #subject-bar {

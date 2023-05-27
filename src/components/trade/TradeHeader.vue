@@ -1,38 +1,38 @@
-<script lang="ts">
+<script lang='ts'>
 export default {
-  name: 'TradeHeader'
-}
+  name: 'TradeHeader',
+};
 </script>
 
-<script setup lang="ts">
-import { ref } from 'vue'
+<script lang='ts' setup>
+import { ref } from 'vue';
 
 const options = [
   {
     label: 'Trade History',
-    value: 'song0'
+    value: 'song0',
   },
   {
     label: 'World',
-    value: 'song1'
+    value: 'song1',
   },
   {
     label: 'Word',
-    value: 'song2'
-  }
-]
+    value: 'song2',
+  },
+];
 
-let value = ref(options[0].value)
+let value = ref(options[0].value);
 </script>
 
 <template>
-  <div id="trade-header">
-    <n-select v-model:value="value" :options="options" />
+  <div id='trade-header'>
+    <n-select v-model:value='value' :options='options' />
     <span>BSC</span>
   </div>
 </template>
 
-<style scoped lang="scss">
+<style lang='scss' scoped>
 @import './style.scss';
 @import '@/styles/ui/select.scss';
 

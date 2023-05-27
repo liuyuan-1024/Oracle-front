@@ -1,43 +1,43 @@
-<script lang="ts">
+<script lang='ts'>
 export default {
-  name: 'HeaderBar'
-}
+  name: 'HeaderBar',
+};
 </script>
 
-<script setup lang="ts">
-import { ref } from 'vue'
-import HeaderTitleBar from '@/layout/header/components/HeaderTitleBar.vue'
-import LogoBar from '@/layout/header/components/LogoBar.vue'
-import SearchBar from '@/layout/header/components/SearchBar.vue'
-import SwitchBar from '@/layout/header/components/SwitchBar.vue'
-import PersonalBar from '@/layout/header/components/PersonalBar.vue'
+<script lang='ts' setup>
+import { ref } from 'vue';
+import HeaderTitleBar from '@/layout/header/components/HeaderTitleBar.vue';
+import LogoBar from '@/layout/header/components/LogoBar.vue';
+import SearchBar from '@/layout/header/components/SearchBar.vue';
+import SwitchBar from '@/layout/header/components/SwitchBar.vue';
+import PersonalBar from '@/layout/header/components/PersonalBar.vue';
 
 const options = [
   {
     label: 'PancakeSwap pair',
-    value: 'song0'
+    value: 'song0',
   },
   {
     label: 'Hello World',
-    value: 'song1'
+    value: 'song1',
   },
   {
     label: 'Word',
-    value: 'song2'
-  }
-]
+    value: 'song2',
+  },
+];
 
-let value = ref(options[0].value)
+let value = ref(options[0].value);
 </script>
 
 <template>
   <HeaderTitleBar />
-  <div id="header-bar">
+  <div id='header-bar'>
     <LogoBar />
-    <div id="title-bar">
-      <n-select v-model:value="value" :options="options" />
+    <div id='title-bar'>
+      <n-select v-model:value='value' :options='options' />
     </div>
-    <div id="search-switch">
+    <div id='search-switch'>
       <SearchBar />
       <SwitchBar />
     </div>
@@ -45,7 +45,7 @@ let value = ref(options[0].value)
   </div>
 </template>
 
-<style scoped lang="scss">
+<style lang='scss' scoped>
 @import '@/styles/ui/select.scss';
 
 #header-bar {

@@ -1,67 +1,67 @@
-<script lang="ts">
+<script lang='ts'>
 export default {
-  name: 'NavBar'
-}
+  name: 'NavBar',
+};
 </script>
 
-<script setup lang="ts">
-import Option from '@/components/Option.vue'
+<script lang='ts' setup>
+import Option from '@/components/Option.vue';
 </script>
 
 <template>
-  <div id="nav-bar">
-    <Option title="主页" to="Home" class="hvr-grow">
-      <SymbolIcon name="zhuye1" color="#c6c1ee" />
+  <div id='nav-bar'>
+    <Option class='hvr-grow' title='主页' to='Home'>
+      <SymbolIcon color='#c6c1ee' name='zhuye1' />
     </Option>
 
-    <div id="main-bar">
-      <div id="up-bar">
-        <Option title="本地搜索" class="hvr-grow">
-          <SymbolIcon name="LOCALSEARCH" size="12px" />
+    <div id='main-bar'>
+      <div id='up-bar'>
+        <Option class='hvr-grow' title='本地搜索'>
+          <SymbolIcon name='LOCALSEARCH' size='12px' />
         </Option>
-        <Option title="火箭" class="hvr-grow">
-          <SymbolIcon name="huojian" size="13px" />
+        <Option class='hvr-grow' title='火箭'>
+          <SymbolIcon name='huojian' size='13px' />
         </Option>
-        <Option title="堆栈" class="hvr-grow">
-          <SymbolIcon name="stack" size="12px" />
+        <Option class='hvr-grow' title='堆栈'>
+          <SymbolIcon name='stack' size='12px' />
         </Option>
-        <Option title="保存" class="hvr-grow">
-          <SymbolIcon name="save" size="11px" />
+        <Option class='hvr-grow' title='保存'>
+          <SymbolIcon name='save' size='11px' />
         </Option>
       </div>
 
-      <div id="middle-bar">
-        <Option title="闪电" class="hvr-grow">
-          <SymbolIcon name="shandian" size="12px" />
+      <div id='middle-bar'>
+        <Option class='hvr-grow' title='闪电'>
+          <SymbolIcon name='shandian' size='12px' />
         </Option>
-        <Option title="过程" class="hvr-grow">
-          <SymbolIcon name="process" size="12px" color="#9d99be" />
+        <Option class='hvr-grow' title='过程'>
+          <SymbolIcon color='#9d99be' name='process' size='12px' />
         </Option>
-        <Option title="下载" class="hvr-grow">
-          <SymbolIcon name="xiazai" size="12px" style="margin: -10px auto" />
+        <Option class='hvr-grow' title='下载'>
+          <SymbolIcon name='xiazai' size='12px' style='margin: -10px auto' />
         </Option>
-        <Option title="链接" class="hvr-grow">
-          <SymbolIcon name="lianjie" size="12px" color="#9d99be" />
+        <Option class='hvr-grow' title='链接'>
+          <SymbolIcon color='#9d99be' name='lianjie' size='12px' />
         </Option>
       </div>
     </div>
 
-    <div id="down-bar">
-      <Option title="趋势" class="hvr-grow">
-        <SymbolIcon name="zhexiantu" color="#c3bde7" />
+    <div id='down-bar'>
+      <Option class='hvr-grow' title='趋势'>
+        <SymbolIcon color='#c3bde7' name='zhexiantu' />
       </Option>
-      <Option title="钻石" class="hvr-grow">
-        <SymbolIcon name="zuanshi" />
+      <Option class='hvr-grow' title='钻石'>
+        <SymbolIcon name='zuanshi' />
       </Option>
     </div>
 
-    <Option title="世界" to="World" class="hvr-grow">
-      <SymbolIcon name="faxian" />
+    <Option class='hvr-grow' title='世界' to='World'>
+      <SymbolIcon name='faxian' />
     </Option>
   </div>
 </template>
 
-<style scoped lang="scss">
+<style lang='scss' scoped>
 #nav-bar {
   display: flex;
   flex-direction: column;
@@ -119,6 +119,7 @@ import Option from '@/components/Option.vue'
   -webkit-transition-property: transform;
   transition-property: transform;
 }
+
 .hvr-grow:hover,
 .hvr-grow:focus,
 .hvr-grow:active {

@@ -1,46 +1,47 @@
-<script lang="ts">
+<script lang='ts'>
 export default {
-  name: 'Subject'
-}
+  name: 'Subject',
+};
 </script>
 
-<script setup lang="ts">
-import { ref } from 'vue'
-import Option from '@/components/Option.vue'
+<script lang='ts' setup>
+import { ref } from 'vue';
+import Option from '@/components/Option.vue';
 
-const subjectImg = ref<string>('src/assets/images/avatar.jpg')
+const subjectImg = ref<string>('src/assets/images/avatar.jpg');
 </script>
 
 <template>
-  <div id="subject">
-    <div id="up-bar">
-      <img id="subject-img" class="clickable" :src="subjectImg" />
-      <div id="subject-name" class="clickable">
+  <div id='subject'>
+    <div id='up-bar'>
+      <img id='subject-img' :src='subjectImg' class='clickable' />
+      <div id='subject-name' class='clickable'>
         <span> BSC/Cake </span>
       </div>
-      <Option title="更多" to="Home" class="round-icon add">
-        <SymbolIcon name="jia" size="8px" />
+      <Option class='round-icon add' title='更多' to='Home'>
+        <SymbolIcon name='jia' size='8px' />
       </Option>
     </div>
-    <div id="down-bar">
-      <div id="link">
-        <Option title="进入" to="Home" class="round-icon enter">
-          <SymbolIcon name="jinru" size="8px" />
+    <div id='down-bar'>
+      <div id='link'>
+        <Option class='round-icon enter' title='进入' to='Home'>
+          <SymbolIcon name='jinru' size='8px' />
         </Option>
-        <Option title="收藏" to="Home" class="round-icon star">
-          <SymbolIcon name="xingxing" size="8px" />
+        <Option class='round-icon star' title='收藏' to='Home'>
+          <SymbolIcon name='xingxing' size='8px' />
         </Option>
-        <Option title="分享" to="Home" class="round-icon share">
-          <SymbolIcon name="share" size="8px" />
+        <Option class='round-icon share' title='分享' to='Home'>
+          <SymbolIcon name='share' size='8px' />
         </Option>
       </div>
-      <button id="trade" class="clickable">TRADE</button>
+      <button id='trade' class='clickable'>TRADE</button>
     </div>
   </div>
 </template>
 
-<style scoped lang="scss">
+<style lang='scss' scoped>
 @import './style.scss';
+
 .round-icon {
   display: flex;
   justify-content: center;

@@ -1,33 +1,33 @@
-<script lang="ts">
+<script lang='ts'>
 export default {
-  name: 'Option'
-}
+  name: 'Option',
+};
 </script>
 
-<script setup lang="ts">
-import RouterUtils from '@/utils/base/RouterUtils'
+<script lang='ts' setup>
+import RouterUtils from '@/utils/base/RouterUtils';
 
 const props = defineProps<{
   title: string
   // 跳转路由的name或path
   to?: string
-}>()
+}>();
 
 function handClick() {
-  window.$message.info(props.title, { showIcon: false, duration: 1000 })
+  window.$message.info(props.title, { showIcon: false, duration: 1000 });
   if (props.to) {
-    RouterUtils.push(props.to)
+    RouterUtils.push(props.to);
   }
 }
 </script>
 
 <template>
-  <div id="menu-item" class="clickable" :data-title="props.title" @click.prevent="handClick">
+  <div id='menu-item' :data-title='props.title' class='clickable' @click.prevent='handClick'>
     <slot />
   </div>
 </template>
 
-<style scoped lang="scss">
+<style lang='scss' scoped>
 #menu-item {
   position: relative;
 

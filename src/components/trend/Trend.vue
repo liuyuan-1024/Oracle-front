@@ -1,13 +1,13 @@
-<script lang="ts">
+<script lang='ts'>
 export default {
-  name: 'TrendBar'
-}
+  name: 'TrendBar',
+};
 </script>
 
-<script setup lang="ts">
-import Option from '@/components/Option.vue'
-import { Chart } from '@antv/g2'
-import { onMounted } from 'vue'
+<script lang='ts' setup>
+import Option from '@/components/Option.vue';
+import { Chart } from '@antv/g2';
+import { onMounted } from 'vue';
 
 // onMounted(() => {
 //   // 初始化图表实例
@@ -37,23 +37,23 @@ import { onMounted } from 'vue'
 </script>
 
 <template>
-  <div id="trend-bar">
-    <div class="trend-menu">
-      <Option title="瞄准">
-        <SymbolIcon name="icon-test" size="10px" />
+  <div id='trend-bar'>
+    <div class='trend-menu'>
+      <Option title='瞄准'>
+        <SymbolIcon name='icon-test' size='10px' />
       </Option>
-      <Option title="美元">
-        <SymbolIcon name="meiyuan" size="12px" />
+      <Option title='美元'>
+        <SymbolIcon name='meiyuan' size='12px' />
       </Option>
-      <Option title="复制">
-        <SymbolIcon name="fuzhi" size="10px" />
+      <Option title='复制'>
+        <SymbolIcon name='fuzhi' size='10px' />
       </Option>
     </div>
-    <div id="container"></div>
+    <div id='container'></div>
   </div>
 </template>
 
-<style scoped lang="scss">
+<style lang='scss' scoped>
 @import './style.scss';
 
 #trend-bar {

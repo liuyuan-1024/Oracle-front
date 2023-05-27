@@ -1,37 +1,37 @@
-<script lang="ts">
+<script lang='ts'>
 export default {
-  name: 'DetailsItem'
-}
+  name: 'DetailsItem',
+};
 </script>
 
-<script setup lang="ts">
-import { reactive } from 'vue'
-import { IDetailsItemProps } from './Details'
+<script lang='ts' setup>
+import { reactive } from 'vue';
+import { IDetailsItemProps } from './Details';
 
 const itemProps = defineProps<{
   props: IDetailsItemProps
-}>()
+}>();
 
 const iconStyle = reactive({
   color: itemProps.props.iconColor,
-  backgroundColor: itemProps.props.iconBackgroundColor
-})
+  backgroundColor: itemProps.props.iconBackgroundColor,
+});
 </script>
 
 <template>
-  <div id="details-item">
-    <div class="left-icon" :style="iconStyle">
-      <SymbolIcon :name="props.iconName" />
+  <div id='details-item'>
+    <div :style='iconStyle' class='left-icon'>
+      <SymbolIcon :name='props.iconName' />
     </div>
-    <div class="right-describe">
-      <span class="description"> {{ props.description }} </span>
+    <div class='right-describe'>
+      <span class='description'> {{ props.description }} </span>
       <br />
       <span> {{ props.value }} </span>
     </div>
   </div>
 </template>
 
-<style scoped lang="scss">
+<style lang='scss' scoped>
 @import '../style.scss';
 
 #details-item {

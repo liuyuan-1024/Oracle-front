@@ -1,20 +1,20 @@
 <!-- 切换组件，用于切换主题等 -->
 
-<script lang="ts">
+<script lang='ts'>
 export default {
-  name: 'SwitchBar'
-}
+  name: 'SwitchBar',
+};
 </script>
 
-<script setup lang="ts"></script>
+<script lang='ts' setup></script>
 
 <template>
-  <div id="switch-bar">
-    <SymbolIcon name="yitian" size="12px" />
+  <div id='switch-bar'>
+    <SymbolIcon name='yitian' size='12px' />
   </div>
 </template>
 
-<style scoped lang="scss">
+<style lang='scss' scoped>
 #switch-bar {
   display: flex;
   align-items: center;

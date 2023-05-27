@@ -1,13 +1,14 @@
 export default class StorageUtils {
-  static ACCESS: string = 'access_token'
-  static REFRESH: string = 'refresh_token'
+  static ACCESS: string = 'access_token';
+  static REFRESH: string = 'refresh_token';
+  static LOGIN_USER = 'loginUser';
 
   /**
    * localStorage存储access_token
    * @param access_token 权限令牌
    */
   static setAccessTokenToLocal(access_token: string) {
-    localStorage.setItem(this.ACCESS, access_token)
+    localStorage.setItem(this.ACCESS, access_token);
   }
 
   /**
@@ -15,45 +16,43 @@ export default class StorageUtils {
    * @param refresh_token 刷新令牌
    */
   static setRefreshTokenToLocal(refresh_token: string) {
-    localStorage.setItem(this.REFRESH, refresh_token)
+    localStorage.setItem(this.REFRESH, refresh_token);
   }
 
   /**
    * 移除localStorage中存储的access_token
    */
   static delAccessTokenFromLocal() {
-    localStorage.removeItem(this.ACCESS)
+    localStorage.removeItem(this.ACCESS);
   }
 
   /**
    * 移除localStorage中存储的refresh_token
    */
   static delRefreshTokenFromLocal() {
-    localStorage.removeItem(this.REFRESH)
+    localStorage.removeItem(this.REFRESH);
   }
 
   /**
    * 获取localStorage中存储的access_token
    */
   static getAccessTokenFromLocal(): string {
-    return localStorage.getItem(this.ACCESS) || ''
+    return localStorage.getItem(this.ACCESS) || '';
   }
 
   /**
    * 获取localStorage中存储的refresh_token
    */
   static getRefreshTokenFromLocal(): string {
-    return localStorage.getItem(this.REFRESH) || ''
+    return localStorage.getItem(this.REFRESH) || '';
   }
 
   /**
    * 清空localStorage
    */
   static clearLocal() {
-    localStorage.clear()
+    localStorage.clear();
   }
-
-  static LOGIN_USER = 'loginUser'
 
   /**
    * sessionStorage存储登录用户信息
@@ -67,7 +66,7 @@ export default class StorageUtils {
    * 移除sessionStorage中存储的用户信息
    */
   static delLoginUserFromSession() {
-    sessionStorage.removeItem(this.LOGIN_USER)
+    sessionStorage.removeItem(this.LOGIN_USER);
   }
 
   /**
@@ -86,6 +85,6 @@ export default class StorageUtils {
    * 清空sessionStorage
    */
   static clearSession() {
-    sessionStorage.clear()
+    sessionStorage.clear();
   }
 }

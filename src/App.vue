@@ -1,12 +1,12 @@
-<script setup lang="ts">
-import Message from '@/components/message/Message.vue'
-import Layout from '@/layout/Layout.vue'
-import Login from '@/views/login/Login.vue'
+<script lang='ts' setup>
+import Message from '@/components/message/Message.vue';
+import Layout from '@/layout/Layout.vue';
+import Login from '@/views/login/Login.vue';
 
 // 判断用户是否已登录
 function isLogin(): boolean {
   // 未实现，现在默认用户已登录
-  return true
+  return true;
 }
 </script>
 
@@ -18,6 +18,6 @@ function isLogin(): boolean {
     </n-dialog-provider>
   </n-message-provider>
 
-  <Login v-if="!isLogin()" />
+  <Login v-if='!isLogin()' />
   <Layout v-else />
 </template>

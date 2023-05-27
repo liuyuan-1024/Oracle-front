@@ -1,7 +1,7 @@
 // 关于 登录登出 的工具类
 
-import requests from '@/api/requests'
-import RouterUtils from '@/utils/base/RouterUtils'
+import requests from '@/api/requests';
+import RouterUtils from '@/utils/base/RouterUtils';
 
 export default class LoginUtils {
   /**
@@ -13,17 +13,17 @@ export default class LoginUtils {
       .post('/user/register', {
         userAccount: args.email,
         userPassword: args.password,
-        checkPassword: args.rPassword
+        checkPassword: args.rPassword,
       })
       .then((res: any) => {
-        window.$message.success('注册成功')
-        RouterUtils.push('/')
+        window.$message.success('注册成功');
+        RouterUtils.push('/');
       })
       .catch((error) => {
-        window.$message.warning(error.message)
+        window.$message.warning(error.message);
         // TODO: 开发完成后删除此行code
-        RouterUtils.push('/')
-      })
+        RouterUtils.push('/');
+      });
   }
 
   /**
@@ -34,17 +34,17 @@ export default class LoginUtils {
     requests
       .post('/user/login', {
         userAccount: args.email,
-        userPassword: args.password
+        userPassword: args.password,
       })
       .then((res: any) => {
-        window.$message.success('登录成功')
-        RouterUtils.push('/')
+        window.$message.success('登录成功');
+        RouterUtils.push('/');
       })
       .catch((error) => {
-        window.$message.error(error.message)
+        window.$message.error(error.message);
         // TODO: 开发完成后删除此行code
-        RouterUtils.push('/')
-      })
+        RouterUtils.push('/');
+      });
   }
 
   /**
@@ -54,13 +54,13 @@ export default class LoginUtils {
     requests
       .post('/user/logout')
       .then((res) => {
-        window.$message.success('注销成功')
-        RouterUtils.push('/login')
+        window.$message.success('注销成功');
+        RouterUtils.push('/login');
       })
       .catch((error) => {
-        window.$message.error(error.message)
+        window.$message.error(error.message);
         // TODO: 开发完成后删除此行code
-        RouterUtils.push('/login')
-      })
+        RouterUtils.push('/login');
+      });
   }
 }

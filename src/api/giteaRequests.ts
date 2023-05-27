@@ -1,12 +1,12 @@
 //==================== axios请求 Gitea后端接口 ====================//
-import axios from 'axios'
+import axios from 'axios';
 
 const giteaRequests = axios.create({
   // 请求地址
   baseURL: import.meta.env.VITE_GITEA_API_URL,
   // 设置接口超时时间, 1.5s
-  timeout: 1500
-})
+  timeout: 1500,
+});
 
 // 请求拦截器
 giteaRequests.interceptors.request.use(
@@ -14,15 +14,15 @@ giteaRequests.interceptors.request.use(
     config.headers = {
       Authorization: 'token f9bf37b17f683baa5a331bd691bf62ae000e865c',
       accept: 'application/json',
-      'Content-Type': 'application/json;charset=UTF-8' // 传参方式json
-    }
-    return config
+      'Content-Type': 'application/json;charset=UTF-8', // 传参方式json
+    };
+    return config;
   },
   (error: any) => {
-    window.$message.warning('请求拦截异常,请稍后再试!')
-    return Promise.reject(error)
+    window.$message.warning('请求拦截异常,请稍后再试!');
+    return Promise.reject(error);
   }
-)
+);
 
 //http response 拦截器, 会处理所有的错误响应(code是400开头)
 // giteaRequests.interceptors.response.use(
@@ -41,4 +41,4 @@ giteaRequests.interceptors.request.use(
 //   }
 // )
 
-export default giteaRequests
+export default giteaRequests;

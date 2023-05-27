@@ -1,48 +1,49 @@
 <!-- 自定义标题栏 -->
 
-<script lang="ts">
+<script lang='ts'>
 export default {
-  name: 'HeaderTitleBar'
-}
+  name: 'HeaderTitleBar',
+};
 </script>
 
-<script setup lang="ts">
+<script lang='ts' setup>
 // 关闭窗口
 function close() {
-  window.ipcRenderer.send('close-window')
+  window.ipcRenderer.send('close-window');
 }
 
 // 最小化窗口
 function minimize() {
-  window.ipcRenderer.send('minimize-window')
+  window.ipcRenderer.send('minimize-window');
 }
 
 // 最大化/还原窗口
 function maximize() {
-  window.ipcRenderer.send('maximize-window')
+  window.ipcRenderer.send('maximize-window');
 }
 </script>
 
 <template>
-  <div id="header-title-bar">
-    <div id="traffic-lights">
-      <a @click="close" class="light red"></a>
-      <a @click="minimize" class="light yellow"></a>
-      <a @click="maximize" class="light green"></a>
+  <div id='header-title-bar'>
+    <div id='traffic-lights'>
+      <a class='light red' @click='close'></a>
+      <a class='light yellow' @click='minimize'></a>
+      <a class='light green' @click='maximize'></a>
     </div>
-    <div id="title">
-      <span id="text">标题标题标题标题标题标题标题</span>
+    <div id='title'>
+      <span id='text'>标题标题标题标题标题标题标题</span>
     </div>
   </div>
 </template>
 
-<style scoped lang="scss">
+<style lang='scss' scoped>
 #header-title-bar {
   height: $header_title_bar_height;
 
   #traffic-lights {
     display: inline-block;
     height: 100%;
+
     .light {
       position: relative;
       top: 45%;
@@ -53,16 +54,20 @@ function maximize() {
       margin-right: 3.5px;
       border-radius: 50%;
       cursor: pointer;
+
       &:hover {
         opacity: 0.8;
       }
     }
+
     .yellow {
       background-color: #ffbf2b;
     }
+
     .red {
       background-color: #fd6458;
     }
+
     .green {
       background-color: #24cc3d;
     }

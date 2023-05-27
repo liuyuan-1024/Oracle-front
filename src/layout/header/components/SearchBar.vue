@@ -1,16 +1,16 @@
-<script lang="ts">
+<script lang='ts'>
 export default {
-  name: 'SearchBar'
-}
+  name: 'SearchBar',
+};
 </script>
 
-<script setup lang="ts"></script>
+<script lang='ts' setup></script>
 
 <template>
-  <input id="search-bar" placeholder="Search" />
+  <input id='search-bar' placeholder='Search' />
 </template>
 
-<style scoped lang="scss">
+<style lang='scss' scoped>
 #search-bar {
   outline: none;
   width: 70%;

@@ -1,14 +1,14 @@
 export enum Trend {
   rise,
-  fall
+  fall,
 }
 
 export interface IHistoryItemProps {
-  date: string
-  price: number
-  trend: Trend
+  date: string;
+  price: number;
+  trend: Trend;
   // 交易序列号
-  serialNumber: string
+  serialNumber: string;
 }
 
 // export {Trend }

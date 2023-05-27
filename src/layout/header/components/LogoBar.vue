@@ -1,20 +1,20 @@
-<script lang="ts">
+<script lang='ts'>
 export default {
-  name: 'LogoBar'
-}
+  name: 'LogoBar',
+};
 </script>
 
-<script setup lang="ts">
+<script lang='ts' setup>
 // const logo: string = 'src/assets/images/logo.svg'
 </script>
 
 <template>
-  <div id="logo-bar">
-    <img src="@/assets/images/logo.svg" alt="" />
+  <div id='logo-bar'>
+    <img alt='' src='@/assets/images/logo.svg' />
   </div>
 </template>
 
-<style scoped lang="scss">
+<style lang='scss' scoped>
 #logo-bar {
   cursor: pointer;
 }

@@ -1,50 +1,50 @@
-<script lang="ts">
+<script lang='ts'>
 export default {
-  name: 'PersonalBar'
-}
+  name: 'PersonalBar',
+};
 </script>
 
-<script setup lang="ts">
-import { ref } from 'vue'
-import Option from '@/components/Option.vue'
-import LoginUtils from '@/api/LoginUtils'
-import RouterUtils from '@/utils/base/RouterUtils'
+<script lang='ts' setup>
+import { ref } from 'vue';
+import Option from '@/components/Option.vue';
+import LoginUtils from '@/api/LoginUtils';
+import RouterUtils from '@/utils/base/RouterUtils';
 
-const avatar = ref<string>('src/assets/images/avatar.jpg')
+const avatar = ref<string>('src/assets/images/avatar.jpg');
 
-let userId = ref(0)
+let userId = ref(0);
 
 const options = [
   {
     label: '个人中心',
-    key: '/mine' + '/:' + userId.value
+    key: '/mine' + '/:' + userId.value,
   },
   {
     label: '退出登录',
-    key: 'logout'
-  }
-]
+    key: 'logout',
+  },
+];
 
 function select(key: string) {
   switch (key) {
     case 'logout':
-      LoginUtils.logout()
-      break
+      LoginUtils.logout();
+      break;
     default:
-      RouterUtils.push(key)
+      RouterUtils.push(key);
   }
 }
 </script>
 
 <template>
-  <Option id="personal" title="个人中心">
-    <n-dropdown :options="options" :on-select="select">
-      <img id="avatar" :src="avatar" />
+  <Option id='personal' title='个人中心'>
+    <n-dropdown :on-select='select' :options='options'>
+      <img id='avatar' :src='avatar' />
     </n-dropdown>
   </Option>
 </template>
 
-<style scoped lang="scss">
+<style lang='scss' scoped>
 #personal {
   height: 100%;
 }

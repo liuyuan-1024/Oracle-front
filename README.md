@@ -55,7 +55,8 @@ export default defineConfig({
 
 ## icon 图标
 
-- iconfont 的 stack 项目 <https://www.iconfont.cn/manage/index?spm=a313x.7781069.1998910419.22&manage_type=myprojects&projectId=3628784&keyword=&project_type=&page=>
+- iconfont 的 stack
+  项目 <https://www.iconfont.cn/manage/index?spm=a313x.7781069.1998910419.22&manage_type=myprojects&projectId=3628784&keyword=&project_type=&page=>
 
 - 采用 symbol 方式引入，并且自定义 symbol icon 组件
 

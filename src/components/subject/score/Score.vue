@@ -1,16 +1,16 @@
-<script lang="ts">
+<script lang='ts'>
 export default {
-  name: 'Score'
-}
+  name: 'Score',
+};
 </script>
 
-<script setup lang="ts"></script>
+<script lang='ts' setup></script>
 
 <template>
-  <div id="score"></div>
+  <div id='score'></div>
 </template>
 
-<style scoped lang="scss">
+<style lang='scss' scoped>
 @import '../style.scss';
 
 #score {
