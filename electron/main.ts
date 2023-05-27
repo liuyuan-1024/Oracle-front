@@ -51,8 +51,8 @@ function createWindow() {
     mainWindow.loadFile(path.join(__dirname, '../dist/index.html'));
   } else {
     mainWindow
-      .loadURL(`${process.env['VITE_DEV_SERVER_URL']}:${process.env['VITE_DEV_SERVER_PORT']}`)
-      .then();
+    .loadURL(`${process.env['VITE_DEV_SERVER_URL']}:${process.env['VITE_DEV_SERVER_PORT']}`)
+    .then();
   }
 
   // 打开开发工具
@@ -90,13 +90,13 @@ app.whenReady().then(() => {
     });
   });
 
-  app.on('activate', function (e) {
+  app.on('activate', function(e) {
     // 通常在 macOS 上，当点击 dock 中的应用程序图标时，如果没有其他
     // 打开的窗口，那么程序会重新创建一个窗口。
     if (BrowserWindow.getAllWindows().length === 0) createWindow();
   });
 
-  tray?.on('click', function () {
+  tray?.on('click', function() {
     mainWindow?.show();
   });
 });

@@ -10,20 +10,20 @@ export default class LoginUtils {
    */
   static register(args: { email: string; password: string; rPassword?: string }) {
     requests
-      .post('/user/register', {
-        userAccount: args.email,
-        userPassword: args.password,
-        checkPassword: args.rPassword,
-      })
-      .then((res: any) => {
-        window.$message.success('注册成功');
-        RouterUtils.push('/');
-      })
-      .catch((error) => {
-        window.$message.warning(error.message);
-        // TODO: 开发完成后删除此行code
-        RouterUtils.push('/');
-      });
+    .post('/user/register', {
+      userAccount: args.email,
+      userPassword: args.password,
+      checkPassword: args.rPassword,
+    })
+    .then((res: any) => {
+      window.$message.success('注册成功');
+      RouterUtils.push('/');
+    })
+    .catch((error) => {
+      window.$message.warning(error.message);
+      // TODO: 开发完成后删除此行code
+      RouterUtils.push('/');
+    });
   }
 
   /**
@@ -32,19 +32,19 @@ export default class LoginUtils {
    */
   static login(args: { email: string; password: string }) {
     requests
-      .post('/user/login', {
-        userAccount: args.email,
-        userPassword: args.password,
-      })
-      .then((res: any) => {
-        window.$message.success('登录成功');
-        RouterUtils.push('/');
-      })
-      .catch((error) => {
-        window.$message.error(error.message);
-        // TODO: 开发完成后删除此行code
-        RouterUtils.push('/');
-      });
+    .post('/user/login', {
+      userAccount: args.email,
+      userPassword: args.password,
+    })
+    .then((res: any) => {
+      window.$message.success('登录成功');
+      RouterUtils.push('/');
+    })
+    .catch((error) => {
+      window.$message.error(error.message);
+      // TODO: 开发完成后删除此行code
+      RouterUtils.push('/');
+    });
   }
 
   /**
@@ -52,15 +52,15 @@ export default class LoginUtils {
    */
   static logout() {
     requests
-      .post('/user/logout')
-      .then((res) => {
-        window.$message.success('注销成功');
-        RouterUtils.push('/login');
-      })
-      .catch((error) => {
-        window.$message.error(error.message);
-        // TODO: 开发完成后删除此行code
-        RouterUtils.push('/login');
-      });
+    .post('/user/logout')
+    .then((res) => {
+      window.$message.success('注销成功');
+      RouterUtils.push('/login');
+    })
+    .catch((error) => {
+      window.$message.error(error.message);
+      // TODO: 开发完成后删除此行code
+      RouterUtils.push('/login');
+    });
   }
 }

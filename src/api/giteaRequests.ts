@@ -21,7 +21,7 @@ giteaRequests.interceptors.request.use(
   (error: any) => {
     window.$message.warning('请求拦截异常,请稍后再试!');
     return Promise.reject(error);
-  }
+  },
 );
 
 //http response 拦截器, 会处理所有的错误响应(code是400开头)

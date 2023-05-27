@@ -20,7 +20,7 @@ requests.interceptors.request.use(
   (error: any) => {
     window.$message.warning('请求拦截异常,请稍后再试!');
     return Promise.reject(error);
-  }
+  },
 );
 
 //http response 拦截器, 会处理所有的错误响应(code是400开头)
@@ -37,7 +37,7 @@ requests.interceptors.response.use(
   },
   (error: any) => {
     return Promise.reject(new Error('服务器异常,请稍后再试!'));
-  }
+  },
 );
 
 export default requests;
